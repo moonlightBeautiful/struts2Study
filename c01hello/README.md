@@ -1,0 +1,10 @@
+#Struts2学习
+hello
+    简介：
+        Struts2是Struts1+WebWork的结合，是一个全新的MVC框架。Struts1已经不流行了。
+        Struts2更适合企业级团队开发，方便系统维护。采用拦截器机制来处理用户请求，在模块化的处理和页面的展现方面发挥吊炸天作用。
+    编码：
+        1.pom引入依赖
+        2.web.xml配置核心分发器
+        3.struts.xml配置文件
+        4.Action类，要实现Action接口
