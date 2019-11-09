@@ -31,8 +31,10 @@
         result配置
             name：action返回字符串匹配。
             type：请求转发类型，默认为转发。
+                dispatcher，默认内部转发
+                redirect，重定向，数据丢失。
                 type为chain，则是转发到另一个action，数据会带过去。但是另一个action怎么获取上一个action的值，还不知道。
-                type为redirectAction，则从定向另一个action，数据不会带过去。
+                type为redirectAction，则重定向另一个action，数据不会带过去。
                 dispatcher、redirect、chain、redirectAction、其他的用到再说
         global-results配置，里面配置result
             当响应找不到action中的result，则取全局result中找。   
