@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="manage" extends="struts-default">
+
+        <interceptors>
+            <interceptor name="loginInterceptor" class="com.java1234.interceptor.LoginInterceptor"></interceptor>
+            <interceptor name="girlAuthorityInterceptor" class="com.java1234.interceptor.GirlAuthorityInterceptor"></interceptor>
+            <interceptor-stack name="myStack">
+                <interceptor-ref name="loginInterceptor"></interceptor-ref>
+                <interceptor-ref name="girlAuthorityInterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!--<default-interceptor-ref name="myStack"></default-interceptor-ref>-->
+
+        <global-results>
+            <result name="error">error.jsp</result>
+        </global-results>
+
+        <action name="userAction" class="com.java1234.action.UserAction">
+            <result name="success">success.jsp</result>
+            <interceptor-ref name="girlAuthorityInterceptor"></interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+
+        <action name="girlAction" class="com.java1234.action.GirlAction">
+            <result name="success">success.jsp</result>
+            <interceptor-ref name="loginInterceptor"></interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+    </package>
+
+</struts>
