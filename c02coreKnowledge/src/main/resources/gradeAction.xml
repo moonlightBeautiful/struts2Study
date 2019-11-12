@@ -5,7 +5,7 @@
 
 <struts>
     <package name="userAction" extends="struts-default">
-        <action name="grade" class="java.com.java1234.action.GradeAction">
+        <action name="grade" class="com.java1234.action.GradeAction">
             <result name="success">success.jsp</result>
         </action>
     </package>

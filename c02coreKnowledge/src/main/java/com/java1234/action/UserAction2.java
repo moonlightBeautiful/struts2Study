@@ -1,8 +1,8 @@
-package java.com.java1234.action;
+package com.java1234.action;
 
 
-import java.com.java1234.model.User;
-import java.com.java1234.service.UserService;
+import com.java1234.model.User;
+import com.java1234.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 

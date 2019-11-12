@@ -1,6 +1,6 @@
-package java.com.java1234.service;
+package com.java1234.service;
 
-import java.com.java1234.model.User;
+import com.java1234.model.User;
 
 public class UserService {
 

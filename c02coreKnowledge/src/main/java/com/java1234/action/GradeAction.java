@@ -1,4 +1,4 @@
-package java.com.java1234.action;
+package com.java1234.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 
