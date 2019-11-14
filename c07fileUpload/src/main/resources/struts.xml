@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.multipart.maxSize" value="20000000"></constant>
+
+    <package name="manager" extends="struts-default">
+
+        <action name="upload" class="com.java1234.action.FileUploadAction">
+            <result name="success">/success.jsp</result>
+            <!--输入校验失败等情况 ，会自动跳转到name为input的result-->
+            <result name="input">/fileupload.jsp</result>
+            <!-- <interceptor-ref name="fileUpload">
+                <param name="allowedTypes">image/bmp,image/x-png,image/gif,image/jpg,image/jpeg</param>
+                <param name="maximumSize">81101</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref> -->
+        </action>
+        <action name="uploads" class="com.java1234.action.FilesUploadAction">
+            <result name="success">/success.jsp</result>
+            <!--输入校验失败等情况 ，会自动跳转到name为input的result-->
+            <result name="input">/filesupload.jsp</result>
+        </action>
+
+        <action name="downloadFile" class="com.java1234.action.FileDownloadAction">
+            <!-- result类型是流(stream)类型，以流的形势返回给客户端。 name存在则跳转，不存在则不跳转。-->
+            <result name="success" type="stream">
+                <!-- inputName指向被下载文件的来源，对应Action中getInputStream()方法返回的InputStream  -->
+                <!-- 最好指定inputName属性的值为inputName，默认从getInputName属性的值()获取流  -->
+                <param name="inputName">inputStream</param>
+                <!-- contentType指定下载的内容类型，如图片类型、文档类型等……     -->
+                <param name="contentType">${contentType}</param>
+                <!-- contentDisposition指定文件下载的处理方式，2种，内联(inline)：将文件内容直接显示在页面。附件(attachment)：会弹出文件保存对话框 -->
+                <param name="contentDisposition">attachment;filename=${fileName}</param>
+            </result>
+            <result name="input">/filedownload.jsp</result>
+            <result name="error">/filedownload.jsp</result>
+        </action>
+    </package>
+
+</struts>
