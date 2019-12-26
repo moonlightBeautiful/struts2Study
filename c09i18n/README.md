@@ -1,5 +1,6 @@
 #Struts2学习
-    国际化：
+国际化：
+    简介
         让软件实现多语言支持， internationalization(i18n)
     国际化设置：根据浏览器设置的语言环境Struts2自动切换
         前台使用标签取值 <s:text name="配置文件的key">可以在这里为key的值设置参数</stext>

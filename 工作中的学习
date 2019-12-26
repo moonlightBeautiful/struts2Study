@@ -1,0 +1,12 @@
+1.ServletRequestAware接口
+        Action实现这个接口，这个接口有个方法，setServletRequest(HttpServletRequest request) 可以获得这次请求的request对象。
+        public class ProductAction extends ActionSupport implements ServletRequestAware {
+            private HttpServletRequest request;
+            @Override
+            public void setServletRequest(HttpServletRequest request) {
+                // TODO Auto-generated method stub
+                this.request = request;
+            }
+            ...
+        }
+

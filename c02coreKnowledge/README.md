@@ -1,7 +1,7 @@
 #Struts2学习
 核心知识
     1.自动set/get数据：action类要有set/get方法
-        请求，自动set匹配参数，按照名字匹配
+        请求，自动set匹配参数，按照名字一直规则匹配
             属性驱动：作为action类的属性
                 基本数据类型：前台表单元素name=Action类属性名
                 数组：前台表多个表单元素name相同，比如checkbox
