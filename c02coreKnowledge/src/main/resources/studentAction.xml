@@ -5,14 +5,14 @@
 
 <struts>
     <package name="studentAction" extends="struts-default">
-        <action name="student_*" class="com.java1234.action.StudentAction" method="{1}">
+     <!--   <action name="student_*" class="com.java1234.action.StudentAction" method="{1}">
             <result name="success">success.jsp</result>
-        </action>
+        </action>-->
 
         <!-- 2个*也可以-->
-        <!-- <action name="*_*" class="java.com.java1234.action.{1}Action" method="{2}">
+        <action name="*_*" class="java.com.java1234.action.{1}Action" method="{2}">
             <result name="success">success.jsp</result>
-         </action>-->
+        </action>
     </package>
 
 </struts>

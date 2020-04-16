@@ -8,16 +8,19 @@
 </head>
 <body>
 <form action="userAction1" method="post">
+    <p>基本数据类型</p>
     姓名：<input type="text" name="name"/><br/>
     年龄：<input type="text" name="age"/><br/>
+    <p>bean数据类型</p>
     用户名：<input type="text" name="user.userName"/><br/>
     密码：<input type="text" name="user.password"/>
     爱好：<br/>
+    <p>基本数组数据类型</p>
     <input type="checkbox" name="hobby" value="唱歌"/>唱歌
     <input type="checkbox" name="hobby" value="跳舞"/>跳舞
     <input type="checkbox" name="hobby" value="睡觉"/>睡觉
     <input type="checkbox" name="hobby" value="玩CF"/>玩CF
-    学生：
+    <p>bean数组数据类型</p>
     <table>
         <tr>
             <th>姓名</th>

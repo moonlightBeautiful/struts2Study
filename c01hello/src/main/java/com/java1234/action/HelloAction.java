@@ -8,6 +8,7 @@ import com.opensymphony.xwork2.Action;
  * @create 2019-10-31-23:48
  */
 public class HelloAction implements Action {
+
     @Override
     public String execute() throws Exception {
         System.out.println("执行了Action的默认方法");

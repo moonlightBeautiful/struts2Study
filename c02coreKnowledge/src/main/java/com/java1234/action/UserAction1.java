@@ -3,7 +3,6 @@ package com.java1234.action;
 
 import com.java1234.model.Student;
 import com.java1234.model.User;
-import com.java1234.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
 
 import java.util.List;
@@ -19,11 +18,10 @@ public class UserAction1 extends ActionSupport {
 
     private static final long serialVersionUID = 1L;
 
-    private UserService userService = new UserService();
     //基本数据类型
     private String name;
     private int age;
-    //数组类型
+    //基本数据类型数组
     private String[] hobby;
     //bean类型
     private User user;
@@ -76,7 +74,7 @@ public class UserAction1 extends ActionSupport {
         System.out.println("执行了UserAction的默认方法");
         System.out.println("姓名：" + name);
         System.out.println("年龄：" + age);
-        if(hobby!=null){
+        if (hobby != null) {
             for (String s : hobby) {
                 System.out.println("爱好：" + s);
             }
@@ -85,11 +83,7 @@ public class UserAction1 extends ActionSupport {
         for (Student student : students) {
             System.out.println("学生：" + student);
         }
-        if (userService.login(user)) {
-            return SUCCESS;
-        } else {
-            return ERROR;
-        }
+        return "success";
     }
 
 }

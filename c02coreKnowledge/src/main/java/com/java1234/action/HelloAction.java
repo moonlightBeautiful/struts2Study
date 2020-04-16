@@ -40,15 +40,4 @@ public class HelloAction implements Action {
         return SUCCESS;
     }
 
-    public String r()throws Exception{
-        return "r";
-    }
-
-    public String c()throws Exception{
-        return "c";
-    }
-
-    public String ra()throws Exception{
-        return "ra";
-    }
 }
